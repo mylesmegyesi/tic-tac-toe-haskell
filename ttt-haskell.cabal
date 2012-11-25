@@ -1,0 +1,36 @@
+name:                ttt-haskell
+version:             0.1.0.0
+synopsis:            TicTacToe in Haskell
+homepage:            https://github.com/mylesmegyesi/ttt-haskell
+license:             MIT
+author:              Myles Megyesi
+maintainer:          myles.megyesi@gmail.com
+category:            Learning
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable ttt-haskell
+  main-is:
+    Main.hs
+
+  build-depends:
+    base == 4.5.*
+
+  hs-source-dirs:
+    src
+
+test-suite spec
+  type:
+    exitcode-stdio-1.0
+
+  main-is:
+    Spec.hs
+
+  hs-source-dirs:
+    src,
+    test
+
+  build-depends:
+    base == 4.5.*,
+    hspec == 1.4.2,
+    hlint == 1.8.35
