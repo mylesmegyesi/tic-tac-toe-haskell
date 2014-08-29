@@ -14,15 +14,12 @@ executable ttt-haskell
     Main.hs
 
   build-depends:
-    base == 4.5.*
+    base == 4.6.*
 
   hs-source-dirs:
     src
 
-test-suite spec
-  type:
-    exitcode-stdio-1.0
-
+executable spec
   main-is:
     Spec.hs
 
@@ -31,6 +28,6 @@ test-suite spec
     test
 
   build-depends:
-    base == 4.5.*,
-    hspec == 1.4.2,
-    hlint == 1.8.35
+    base == 4.6.*,
+    hspec == 1.11.3,
+    hlint == 1.9.4

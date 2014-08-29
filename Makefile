@@ -1,16 +1,14 @@
 
-configure: clean deps
-	cabal configure --enable-tests
-
+.PHONY: deps
 deps:
 	cabal install --only-dependencies
 
-build:
-	cabal-dev build
-
+.PHONY: clean
 clean:
 	rm -rf cabal-dev dist
 
-test: build
+.PHONY: test
+test:
+	cabal build spec
 	hlint src test
 	./dist/build/spec/spec ${ARGS}
